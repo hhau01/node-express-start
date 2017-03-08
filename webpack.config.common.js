@@ -33,7 +33,7 @@ module.exports = {
                 loader: 'html'
             },
             {
-                test: /\.css/,
+                test: /\.css$/,
                 loader: 'raw'
             }
         ]
