@@ -8,6 +8,10 @@ npm install
 
 ## Project Dependencies
 
+add angular dependencies
+
+npm install
+
 npm install --save zone.js rxjs core-js
 
 npm install --save-dev @types/node @types/core-js
