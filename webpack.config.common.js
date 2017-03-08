@@ -33,9 +33,17 @@ module.exports = {
                 loader: 'html'
             },
             {
-                test: /.css/,
+                test: /\.css/,
                 loader: 'raw'
             }
         ]
-    }
+    },
+
+    plugins: [
+        new webpack.ContextReplacementPlugin(
+            // The (\\|\/) piece accounts for path separators in *nix and Windows
+            /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+            './src' // location of your src
+        )
+    ]
 };
